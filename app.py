@@ -20,11 +20,14 @@ st.set_page_config(
     layout='wide'
 )
 
-col = st.columns([1, 1])
+col1, col2 = st.columns([1, 1])
 
-with col:
+with col1:
     logo = Image.open("HarmonyHaven.png")
     st.image(logo, width=430)
+
+with col2:
+    st.subheader("_Team RevolveX, Project Health Hack Naija_")
 
 st.header(":blue[HarmonyHaven Chatbot]")
 with st.sidebar:
