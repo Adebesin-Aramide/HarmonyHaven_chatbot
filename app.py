@@ -2,6 +2,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationChain
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 import openai
+from PIL import Image
 from langchain.prompts import (
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,
@@ -18,6 +19,12 @@ st.set_page_config(
     page_title='HarmonyHaven Web App',
     layout='wide'
 )
+
+col = st.columns([1, 1])
+
+with col:
+    logo = Image.open("HarmonyHaven.png")
+    st.image(logo, width=430)
 
 st.header(":blue[HarmonyHaven Chatbot]")
 with st.sidebar:
