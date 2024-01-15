@@ -119,6 +119,17 @@ elif selected == "Chatbot":
                 if i < len(st.session_state['requests']):
                     message(st.session_state["requests"][i], is_user=True,key=str(i)+ '_user')
 
+elif selected == "Community Forum":
+    st.write("""
+    Our community feature is designed to provide users with an additional opportunity to feel good about themselves by fostering a supportive and understandingenvironment.
+    In our thriving community, individuals on their mental health journey can connect with like-minded peers, share experiences, and offer encouragement. 
+    It's a space where every member is valued, and together, we create a positive atmosphere that promotes growth and well-being.
+    Whether you're seeking advice, sharing a personal triumph, or simply engaging in uplifting conversations, our community is here for you. Our AI-powered platform not only offers guidance but also recognizes the importance of human connection. The community feature enhances the overall user experience, ensuring that everyone has a chance to contribute positively to the collective well-being.
+    Join us in the journey toward mental wellness – because here, feeling good about yourself is not just encouraged; it's celebrated. Together, we're building a community that uplifts, inspires, and reinforces the positive steps you're taking on your mental health path.
+    
+    """)
+    
+
 
 st.markdown(
     "`Created by` Team RevolveX | 2024 | \
