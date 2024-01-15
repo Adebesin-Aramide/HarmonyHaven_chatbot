@@ -59,7 +59,7 @@ if selected == "About":
 elif selected == "Chatbot":
     
     if 'responses' not in st.session_state:
-        st.session_state['responses'] = ["How can I help you today?"]
+        st.session_state['responses'] = ["Hi, how are you feeling today?"]
         
     if 'requests' not in st.session_state:
         st.session_state['requests'] = []
@@ -70,8 +70,16 @@ elif selected == "Chatbot":
                 st.session_state.buffer_memory=ConversationBufferWindowMemory(k=3,return_messages=True)
 
 
-    system_msg_template = SystemMessagePromptTemplate.from_template(template="""Answer the question as truthfully as possible using the provided context, 
-and if the answer is not contained within the text below, say 'I don't know'""")
+    system_msg_template = SystemMessagePromptTemplate.from_template(template="""
+    You are a mental health support chatbot. Your task is to provide empathetic, understanding, 
+    and personalized support to users seeking help with their mental health. Engage users with open-ended 
+    questions to better understand their feelings and struggles. Use their name in conversations for a more 
+    personal touch. Offer helpful resources and tips on managing stress or improving mood. 
+    Be sensitive to the severity of the user's condition, and guide those in severe distress 
+    towards immediate professional help. Use clear, accessible language to ensure your assistance is easy to 
+    understand and comforting. Your goal is to create a supportive, safe, and informative space for users to discuss their mental health.
+    
+    """)
 
 
     human_msg_template = HumanMessagePromptTemplate.from_template(template="{input}")
