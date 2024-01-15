@@ -29,7 +29,7 @@ with col1:
 with col2:
     st.subheader("_Team RevolveX, Project Health Hack Naija_")
 
-st.header(":blue[HarmonyHaven Chatbot]")
+st.header(" ")
 with st.sidebar:
     selected = option_menu(menu_title='Main menu',options=['About', 'Chatbot','Community Forum'], 
     icons=['house-fill', 'chat-fill','globe'],
