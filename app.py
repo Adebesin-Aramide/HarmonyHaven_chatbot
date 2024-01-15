@@ -27,7 +27,7 @@ with col1:
     st.image(logo, width=430)
 
 with col2:
-    st.subheader("_Team RevolveX, Project Health Hack Naija_")
+    st.subheader("_Team RevolveX, Project Health Hack Naija 1.0_")
 
 st.header(" ")
 with st.sidebar:
